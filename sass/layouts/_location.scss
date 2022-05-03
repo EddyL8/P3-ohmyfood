@@ -1,0 +1,16 @@
+.location {
+    &__result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $darker-background;
+    }
+
+    &__explore {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $lighter-background;
+    }
+}
