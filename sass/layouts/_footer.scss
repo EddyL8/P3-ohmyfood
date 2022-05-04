@@ -1,7 +1,35 @@
 footer {
+    padding: 25px 25px;
+    color: white;
     background-color: $footer-background;
-    & {
+
+    & h1 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    & ul {
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    & li {
         display: flex;
         flex-direction: column;
+    }
+
+    & a {
+        display: flex;
+        padding: 10px 0 0 0;
+    }
+
+    & i {
+        padding-right: 15px;
+    }
+
+    & .fa-hands-helping {
+        transform: rotate(-15deg);
+        font-size: 70%;
     }
 }

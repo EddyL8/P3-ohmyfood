@@ -11,38 +11,126 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
+.btn-explore {
+  border: none;
+  border-radius: 30px;
+  margin: 25px 0;
+  padding: 15px 25px;
+  font-size: 17px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
 header {
   display: flex;
+  flex-direction: row;
+  padding: 12px 20px 12px 20px;
+}
+header a {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+header img {
+  width: 46%;
 }
 
 .location__result {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   background-color: #EAEAEA;
+}
+.location__result p {
+  padding: 0 23px 0 17px;
+  font-size: 16px;
+  font-weight: bold;
 }
 .location__explore {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 33px 15px;
   background-color: #F6F6F6;
 }
+.location__explore h2 {
+  margin: 0;
+  padding: 7px 25px;
+  font-size: 26px;
+}
+.location__explore p {
+  margin: 0;
+  padding: 7px 0;
+  font-size: 19px;
+  font-weight: 300;
+}
 
-.fonctioning ol {
+.functioning {
+  padding: 25px;
+}
+.functioning h2 {
+  font-size: 22px;
+}
+.functioning ol {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0;
+}
+.functioning li {
+  display: flex;
   align-items: center;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 25px 30px;
+  background-color: #F6F6F6;
+}
+.functioning p {
+  margin: 0;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.restaurants {
+  padding: 25px;
+  background-color: #F6F6F6;
+}
+.restaurants .restaurants__cards img {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
 footer {
+  padding: 25px 25px;
+  color: white;
   background-color: #353535;
 }
-footer {
+footer h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+footer ul {
+  margin: 0;
+  padding: 15px 0;
+}
+footer li {
   display: flex;
   flex-direction: column;
+}
+footer a {
+  display: flex;
+  padding: 10px 0 0 0;
+}
+footer i {
+  padding-right: 15px;
+}
+footer .fa-hands-helping {
+  transform: rotate(-15deg);
+  font-size: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */

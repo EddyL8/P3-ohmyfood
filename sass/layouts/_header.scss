@@ -1,6 +1,15 @@
 header {
-    & {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 20px 12px 20px;
+
+    & a {
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    & img {
+        width: 46%;
     }
 }
