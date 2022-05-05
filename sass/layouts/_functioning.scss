@@ -1,5 +1,6 @@
 .functioning {
     padding: 25px;
+    counter-reset: step;
 
     & h2 {
         font-size: 22px;
@@ -12,11 +13,27 @@
         padding: 0;
     }
 
+    & li::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 87%;
+        content: counter(step);
+        counter-increment: step;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 14px;
+        color: white;
+        background-color: $color-primary;
+    }
+
     & li {
         display: flex;
         align-items: center;
         border-radius: 20px;
-        margin: 10px 0;
+        margin: 10px 10px;
         padding: 25px 30px;
         background-color: $lighter-background;
     }
