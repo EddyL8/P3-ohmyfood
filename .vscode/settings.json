@@ -1,0 +1,16 @@
+{
+    "liveSassCompile.settings.generateMap": true,
+		"liveSassCompile.settings.watchOnLaunch": true,
+		"liveSassCompile.settings.compileOnWatch":true,
+		"liveSassCompile.settings.formats":[
+			{
+				"format": "compressed",
+				"extensionName": ".min.css",
+				"savePath": "/public/css",
+			},
+		],
+		"liveSassCompile.settings.excludeList": [ 
+			"/node_modules/**",
+			"/.vscode/**" 
+		]
+}

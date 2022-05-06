@@ -19,15 +19,12 @@ h1 {
   font-size: 17px;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 0px 5px 5px lightgrey;
 }
 
 header {
   display: flex;
   flex-direction: row;
-  position: relative;
   padding: 12px 20px 12px 20px;
-  box-shadow: 0px 3px 5px lightgrey;
 }
 header a {
   display: flex;
@@ -88,7 +85,7 @@ header img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 20px;
+  right: 87%;
   content: counter(step);
   counter-increment: step;
   width: 25px;
@@ -105,7 +102,6 @@ header img {
   margin: 10px 10px;
   padding: 25px 30px;
   background-color: #F6F6F6;
-  box-shadow: 0px 5px 15px -3px lightgrey;
 }
 .functioning p {
   margin: 0;
@@ -125,17 +121,16 @@ header img {
 
 .card {
   margin: 25px 0;
-  border-radius: 20px;
-  box-shadow: 0px 1px 15px lightgrey;
 }
-.card__img {
-  height: 180px;
+.card a {
+  margin: 5px 0;
 }
 .card img {
   width: 100%;
-  height: 100%;
+  height: 180px;
   border-radius: 20px 20px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__text {
   position: relative;
@@ -145,15 +140,16 @@ header img {
 }
 .card__text i {
   position: absolute;
-  bottom: 37px;
-  right: 25px;
+  bottom: 50%;
+  left: 88%;
   transform: scale(1.3, 1.5);
 }
 
 .banner img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: top;
 }
 
@@ -209,6 +205,4 @@ footer i {
 footer .fa-hands-helping {
   transform: rotate(-15deg);
   font-size: 70%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: 87%;
+        left: 20px;
         content: counter(step);
         counter-increment: step;
         width: 25px;
@@ -36,6 +36,7 @@
         margin: 10px 10px;
         padding: 25px 30px;
         background-color: $lighter-background;
+        box-shadow: 0px 5px 15px -3px lightgrey;
     }
 
     & p {
