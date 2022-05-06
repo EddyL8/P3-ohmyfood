@@ -152,7 +152,7 @@ header img {
 
 .banner img {
   width: 100%;
-  height: 250px;
+  height: 275px;
   object-fit: cover;
   background-position: top;
 }
@@ -160,7 +160,8 @@ header img {
 .restaurant {
   position: relative;
   border-radius: 40px 40px 0 0;
-  padding: 25px;
+  margin-top: -60px;
+  padding: 20px;
   background-color: #F6F6F6;
 }
 .restaurant__name h1 {
@@ -176,6 +177,11 @@ header img {
 .restaurant__menu h2 {
   font-size: 16px;
   font-weight: 400;
+}
+.restaurant .dishes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .restaurant .dishes h3, .restaurant p {
   margin: 0;
