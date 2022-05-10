@@ -12,14 +12,32 @@ h1 {
 }
 
 .btn-explore, .btn-order {
+  background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 30px;
   margin: 25px 0;
   padding: 15px 25px;
   font-size: 17px;
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 5px lightgrey;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-order {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 30px;
+  margin: 25px 0;
+  padding: 15px 25px;
+  font-size: 17px;
+  color: white;
+  box-shadow: 0px 5px 5px lightgrey;
+  width: 200px;
 }
 
 header {
@@ -62,7 +80,7 @@ header img {
 .location__explore h2 {
   margin: 0;
   padding: 7px 25px;
-  font-size: 26px;
+  font-size: 25px;
 }
 .location__explore p {
   margin: 0;
@@ -76,7 +94,7 @@ header img {
   counter-reset: step;
 }
 .functioning h2 {
-  font-size: 22px;
+  font-size: 23px;
 }
 .functioning ol {
   display: flex;
@@ -108,9 +126,14 @@ header img {
   background-color: #F6F6F6;
   box-shadow: 0px 5px 15px -3px lightgrey;
 }
+.functioning i {
+  color: grey;
+  font-size: 18px;
+}
 .functioning p {
   margin: 0;
   padding: 0 20px;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -139,6 +162,21 @@ header img {
   object-fit: cover;
   object-position: bottom;
 }
+.card__new {
+  position: relative;
+}
+.card__new::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  border-radius: 2px;
+  padding: 8px 12px 4px 12px;
+  color: #008766;
+  background-color: #99E2D0;
+  font-size: 14px;
+  font-weight: 500;
+}
 .card__text {
   position: relative;
   border-radius: 0 0 15px 15px;
@@ -150,6 +188,19 @@ header img {
   bottom: 37px;
   right: 25px;
   transform: scale(1.3, 1.5);
+  cursor: pointer;
+}
+.card .full-heart {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  opacity: 0;
+  transition: 200ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.card .full-heart:hover {
+  opacity: 1;
+  transform: scale(1.4, 1.6);
 }
 
 .banner img {
@@ -176,10 +227,23 @@ header img {
   top: 45px;
   right: 43px;
   transform: scale(1.3, 1.5);
+  cursor: pointer;
+}
+.restaurant .full-heart {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  opacity: 0;
+  transition: 200ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurant .full-heart:hover {
+  opacity: 1;
+  transform: scale(1.4, 1.6);
 }
 .restaurant__menu h2 {
   position: relative;
-  padding: 12px 10px;
+  padding: 10px 10px;
   font-size: 16px;
   font-weight: 400;
 }
@@ -188,7 +252,7 @@ header img {
   content: "";
   width: 40px;
   height: 3px;
-  top: 35px;
+  top: 33px;
   left: 10px;
   background-color: #99E2D0;
 }
@@ -197,21 +261,30 @@ header img {
   justify-content: space-between;
   border-radius: 15px;
   margin: 0 0 10px 0;
-  padding: 12px 12px 7px 12px;
   background-color: white;
-}
-.restaurant .dishes h3, .restaurant .dishes p {
-  margin: 0;
-  padding: 0 0 5px 0;
+  overflow: hidden;
 }
 .restaurant .dishes__text {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restaurant .dishes__text h3 {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 12px 12px 3px 12px;
   font-size: 18px;
 }
 .restaurant .dishes__text p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 3px 12px 12px 12px;
   font-weight: 300;
   font-size: 15px;
 }
@@ -222,19 +295,30 @@ header img {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
+}
+.restaurant .dishes__price p {
+  margin: 0;
+  padding: 12px;
   font-size: 15px;
 }
 .restaurant .dishes__check {
   display: flex;
-  align-items: center;
-}
-.restaurant .btn {
-  display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  margin-left: 12px;
+  margin-right: -60px;
+  font-size: 21px;
+  background-color: #99E2D0;
+  transition: all 450ms;
 }
-.restaurant .btn .btn-order {
-  width: 200px;
+.restaurant .dishes:hover .dishes__check {
+  margin-right: 0;
+}
+.restaurant .dishes i {
+  color: white;
+  background: #99E2D0;
 }
 
 footer {

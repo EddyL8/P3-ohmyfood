@@ -1,10 +1,14 @@
 .btn-explore, .btn-order {
-    border: none;
-    border-radius: 30px;
-    margin: 25px 0;
-    padding: 15px 25px;
-    font-size: 17px;
-    color: white;
-    background: linear-gradient($color-secondary, $color-primary);
-    box-shadow: 0px 5px 5px lightgrey;
+    @include btn-style;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-order {
+    @include btn-style;
+    width: 200px;
 }
