@@ -1,0 +1,42 @@
+.loading-spinner {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: $lighter-background;
+    animation: loading-screen 1s 3s forwards ease-in-out;
+    
+    h1 {
+        font-size: 60px;
+    }
+
+    loading-icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    i {
+        margin: 0 25px;
+        font-size: 50px;
+    }
+
+    .check {
+        color: $color-tertiary;
+        animation: loading-check 3s ease-in-out;
+    }
+
+    .utensils {
+        color: $color-primary;
+        animation: loading-utensils 3s ease-in-out;
+    }
+
+    .heart {
+        color: $color-secondary;
+        animation: loading-heart 3s ease-in-out;
+    }
+}

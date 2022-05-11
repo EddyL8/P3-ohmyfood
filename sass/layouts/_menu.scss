@@ -53,6 +53,8 @@
         margin: 0 0 10px 0;
         background-color: white;
         overflow: hidden;
+        cursor: pointer;
+        animation: dishes-appears 500ms both cubic-bezier(.36,0,.68,.05);
 
         &__text {
             display: flex;
@@ -108,11 +110,32 @@
             & .dishes__check {
                 margin-right: 0;
             }
+
+            & i {
+                animation: check-rotate 1000ms ease-in-out;
+            }
         }
 
         i {
             color: white;
             background: $color-tertiary;
+
         }
+    }
+
+    .dishes--load1 {
+        animation-delay: 0ms;
+    }
+
+    .dishes--load2 {
+        animation-delay: 250ms;
+    }
+
+    .dishes--load3 {
+        animation-delay: 500ms;
+    }
+
+    .dishes--load4 {
+        animation-delay: 750ms;
     }
 }

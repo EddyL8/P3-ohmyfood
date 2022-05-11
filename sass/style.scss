@@ -1,10 +1,14 @@
 @import "./base/base";
 
+@import "./base/animations";
+
 @import "./utils/variables";
 
 @import "./utils/mixins";
 
 @import "./components/buttons";
+
+@import "./components/loading-spinner";
 
 @import "./layouts/header";
 

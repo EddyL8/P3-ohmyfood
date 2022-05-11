@@ -11,6 +11,76 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
+@keyframes loading-screen {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes loading-check {
+  0% {
+    transform: rotate(-720deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+@keyframes loading-utensils {
+  0% {
+    transform: translateY(10%) translate(0deg);
+  }
+  25% {
+    transform: translateY(-10%) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10%) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10%) rotate(45deg);
+  }
+  100% {
+    transform: translateY(10%) rotate(0deg);
+  }
+}
+@keyframes loading-heart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dishes-appears {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check-rotate {
+  from {
+    transform: rotate(-720deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
 .btn-explore, .btn-order {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -38,6 +108,43 @@ h1 {
   color: white;
   box-shadow: 0px 5px 5px lightgrey;
   width: 200px;
+}
+
+.loading-spinner {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: #F6F6F6;
+  animation: loading-screen 1s 3s forwards ease-in-out;
+}
+.loading-spinner h1 {
+  font-size: 60px;
+}
+.loading-spinner loading-icons {
+  display: flex;
+  flex-direction: row;
+}
+.loading-spinner i {
+  margin: 0 25px;
+  font-size: 50px;
+}
+.loading-spinner .check {
+  color: #99E2D0;
+  animation: loading-check 3s ease-in-out;
+}
+.loading-spinner .utensils {
+  color: #9356DC;
+  animation: loading-utensils 3s ease-in-out;
+}
+.loading-spinner .heart {
+  color: #FF79DA;
+  animation: loading-heart 3s ease-in-out;
 }
 
 header {
@@ -263,6 +370,8 @@ header img {
   margin: 0 0 10px 0;
   background-color: white;
   overflow: hidden;
+  cursor: pointer;
+  animation: dishes-appears 500ms both cubic-bezier(0.36, 0, 0.68, 0.05);
 }
 .restaurant .dishes__text {
   display: flex;
@@ -316,9 +425,24 @@ header img {
 .restaurant .dishes:hover .dishes__check {
   margin-right: 0;
 }
+.restaurant .dishes:hover i {
+  animation: check-rotate 1000ms ease-in-out;
+}
 .restaurant .dishes i {
   color: white;
   background: #99E2D0;
+}
+.restaurant .dishes--load1 {
+  animation-delay: 0ms;
+}
+.restaurant .dishes--load2 {
+  animation-delay: 250ms;
+}
+.restaurant .dishes--load3 {
+  animation-delay: 500ms;
+}
+.restaurant .dishes--load4 {
+  animation-delay: 750ms;
 }
 
 footer {
