@@ -3,32 +3,47 @@ footer {
     color: white;
     background-color: $footer-background;
 
-    & h1 {
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
         margin: 0;
         font-size: 18px;
         font-weight: 300;
+
+        @media (min-width: 1024px) {
+            font-size: 40px;
+        }
     }
 
-    & ul {
+    ul {
         margin: 0;
         padding: 15px 0;
     }
 
-    & li {
+    li {
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+        }
     }
 
-    & a {
+    a {
         display: flex;
         padding: 10px 0 0 0;
     }
 
-    & i {
+    i {
         padding-right: 15px;
     }
 
-    & .fa-hands-helping {
+    .fa-hands-helping {
         transform: rotate(-15deg);
         font-size: 70%;
     }

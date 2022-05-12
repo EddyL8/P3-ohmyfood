@@ -1,6 +1,11 @@
 .functioning {
-    padding: 25px;
+    padding: 25px 20px;
     counter-reset: step;
+
+    @media (min-width: 1024px) {
+        max-width: 1440px;
+        margin: auto;
+    }
 
     h2 {
         font-size: 23px;
@@ -11,6 +16,13 @@
         flex-direction: column;
         justify-content: center;
         padding: 0;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     li::before {
@@ -27,6 +39,11 @@
         font-size: 14px;
         color: white;
         background-color: $color-primary;
+
+        @media (min-width: 1024px) {
+            position: relative;
+            left: -35px;
+        }
     }
 
     li {
@@ -35,7 +52,7 @@
         align-items: center;
         border-radius: 20px;
         margin: 10px 10px;
-        padding: 25px 30px;
+        padding: 25px 25px;
         background-color: $lighter-background;
         &:hover {
             background-color: lighten($color-primary , 35%);
@@ -44,17 +61,22 @@
                 color: lighten($color-secondary, 5%);
             }
         }
+
+        @media (min-width: 1024px) {
+            width: 28%;
+        }
     }
 
     i {
+        padding-left: 10px;
         color: grey;
         font-size: 18px;
     }
 
     p {
         margin: 0;
-        padding: 0 20px;
-        font-size: 17px;
+        padding: 0 25px;
+        font-size: 16px;
         font-weight: bold;
     }
 }

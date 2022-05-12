@@ -2,10 +2,28 @@
     padding: 25px;
     background-color: $lighter-background;
 
+    h2 {
+        @media (min-width: 1024px) {
+            max-width: 1440px;
+            margin: auto;
+        }
+    }
+
     h3, p {
         margin: 0;
         padding: 0 0 5px 0;
         font-size: 18px;
+    }
+
+    &__cards {
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1440px;
+            margin: auto;
+        }
     }
 }
 
@@ -13,6 +31,10 @@
     margin: 25px 0;
     border-radius: 15px;
     box-shadow: 0px 1px 15px lightgrey;
+
+    @media (min-width: 1024px) {
+        width: 48%;
+    }
 
     &:hover {
         box-shadow: 0px 0px 15px darkgrey;
@@ -40,6 +62,10 @@
 
     &__img {
         height: 170px;
+
+        @media (min-width: 1024px) {
+            height: 220px;
+        }
     }
 
     img {
@@ -48,6 +74,11 @@
         border-radius: 15px 15px 0 0;
         object-fit: cover;
         object-position: bottom;
+
+        @media (min-width: 1024px) {
+            object-fit: cover;
+            object-position: center;
+        }
     }
 
     &__text {

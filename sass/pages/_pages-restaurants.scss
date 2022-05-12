@@ -12,6 +12,12 @@
     padding: 20px 12px;
     background-color: $lighter-background;
 
+    @media (min-width: 1024px) {
+        max-width: 1440px;
+        margin: auto;
+        margin-top: -60px;
+    }
+
     &__name h1 {
         padding: 0 10px;
         font-size: 28px;
@@ -30,21 +36,36 @@
         @include full-heart-style;
     }
 
-    &__menu h2 {
-        position: relative;
-        padding: 10px 10px;
-        font-size: 16px;
-        font-weight: 400;
-    }
+    .menu {
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
 
-    &__menu h2::after {
-        position: absolute;
-        content: "";
-        width: 40px;
-        height: 3px;
-        top: 33px;
-        left: 10px;
-        background-color: $color-tertiary;
+        h2 {
+            position: relative;
+            padding: 10px 10px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    
+        h2::after {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 3px;
+            top: 33px;
+            left: 10px;
+            background-color: $color-tertiary;
+        }
+
+        &__dishes {
+            @media (min-width: 1024px) {
+                width: 32%;
+            }
+        }
     }
 
     .dishes {
@@ -57,6 +78,10 @@
         overflow: hidden;
         cursor: pointer;
         animation: dishes-appears 500ms both cubic-bezier(.36,0,.68,.05);
+
+        @media (min-width: 1024px) {
+            width: 100%;
+        }
 
         &__text {
             display: flex;

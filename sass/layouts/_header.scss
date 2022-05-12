@@ -14,5 +14,9 @@ header {
 
     img {
         width: 46%;
+        
+        @media (min-width: 1024px) {
+            width: 20%;
+        }
     }
 }

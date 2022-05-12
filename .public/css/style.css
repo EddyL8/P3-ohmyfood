@@ -158,6 +158,11 @@ header a {
 header img {
   width: 46%;
 }
+@media (min-width: 1024px) {
+  header img {
+    width: 20%;
+  }
+}
 
 .location__result {
   display: flex;
@@ -192,8 +197,14 @@ header img {
 }
 
 .functioning {
-  padding: 25px;
+  padding: 25px 20px;
   counter-reset: step;
+}
+@media (min-width: 1024px) {
+  .functioning {
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 .functioning h2 {
   font-size: 23px;
@@ -203,6 +214,14 @@ header img {
   flex-direction: column;
   justify-content: center;
   padding: 0;
+}
+@media (min-width: 1024px) {
+  .functioning ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .functioning li::before {
   display: flex;
@@ -219,13 +238,19 @@ header img {
   color: white;
   background-color: #9356DC;
 }
+@media (min-width: 1024px) {
+  .functioning li::before {
+    position: relative;
+    left: -35px;
+  }
+}
 .functioning li {
   box-shadow: 0px 5px 15px -3px lightgrey;
   display: flex;
   align-items: center;
   border-radius: 20px;
   margin: 10px 10px;
-  padding: 25px 30px;
+  padding: 25px 25px;
   background-color: #F6F6F6;
 }
 .functioning li:hover {
@@ -234,14 +259,20 @@ header img {
 .functioning li:hover i {
   color: #ff93e1;
 }
+@media (min-width: 1024px) {
+  .functioning li {
+    width: 28%;
+  }
+}
 .functioning i {
+  padding-left: 10px;
   color: grey;
   font-size: 18px;
 }
 .functioning p {
   margin: 0;
-  padding: 0 20px;
-  font-size: 17px;
+  padding: 0 25px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -249,16 +280,37 @@ header img {
   padding: 25px;
   background-color: #F6F6F6;
 }
+@media (min-width: 1024px) {
+  .restaurants h2 {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 .restaurants h3, .restaurants p {
   margin: 0;
   padding: 0 0 5px 0;
   font-size: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 
 .card {
   margin: 25px 0;
   border-radius: 15px;
   box-shadow: 0px 1px 15px lightgrey;
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 48%;
+  }
 }
 .card:hover {
   box-shadow: 0px 0px 15px darkgrey;
@@ -284,12 +336,23 @@ header img {
 .card__img {
   height: 170px;
 }
+@media (min-width: 1024px) {
+  .card__img {
+    height: 220px;
+  }
+}
 .card img {
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
   object-position: bottom;
+}
+@media (min-width: 1024px) {
+  .card img {
+    object-fit: cover;
+    object-position: center;
+  }
 }
 .card__text {
   position: relative;
@@ -332,6 +395,13 @@ header img {
   padding: 20px 12px;
   background-color: #F6F6F6;
 }
+@media (min-width: 1024px) {
+  .restaurant {
+    max-width: 1440px;
+    margin: auto;
+    margin-top: -60px;
+  }
+}
 .restaurant__name h1 {
   padding: 0 10px;
   font-size: 28px;
@@ -357,13 +427,21 @@ header img {
   opacity: 1;
   transform: scale(1, 1.1);
 }
-.restaurant__menu h2 {
+@media (min-width: 1024px) {
+  .restaurant .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.restaurant .menu h2 {
   position: relative;
   padding: 10px 10px;
   font-size: 16px;
   font-weight: 400;
 }
-.restaurant__menu h2::after {
+.restaurant .menu h2::after {
   position: absolute;
   content: "";
   width: 40px;
@@ -371,6 +449,11 @@ header img {
   top: 33px;
   left: 10px;
   background-color: #99E2D0;
+}
+@media (min-width: 1024px) {
+  .restaurant .menu__dishes {
+    width: 32%;
+  }
 }
 .restaurant .dishes {
   box-shadow: 0px 5px 15px -3px lightgrey;
@@ -382,6 +465,11 @@ header img {
   overflow: hidden;
   cursor: pointer;
   animation: dishes-appears 500ms both cubic-bezier(0.36, 0, 0.68, 0.05);
+}
+@media (min-width: 1024px) {
+  .restaurant .dishes {
+    width: 100%;
+  }
 }
 .restaurant .dishes__text {
   display: flex;
@@ -460,10 +548,22 @@ footer {
   color: white;
   background-color: #353535;
 }
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 footer h1 {
   margin: 0;
   font-size: 18px;
   font-weight: 300;
+}
+@media (min-width: 1024px) {
+  footer h1 {
+    font-size: 40px;
+  }
 }
 footer ul {
   margin: 0;
@@ -472,6 +572,12 @@ footer ul {
 footer li {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  footer li {
+    display: flex;
+    align-items: center;
+  }
 }
 footer a {
   display: flex;
