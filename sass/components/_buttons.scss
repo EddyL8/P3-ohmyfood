@@ -1,14 +1,16 @@
 .btn-explore, .btn-order {
     @include btn-style;
+
+    &:hover {
+        @include btn-hover-style
+    }
 }
 
 .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.btn-order {
-    @include btn-style;
-    width: 200px;
+    .btn-order {
+        width: 200px;
+    }
 }

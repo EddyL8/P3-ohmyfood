@@ -11,6 +11,7 @@
     font-size: 17px;
     color: white;
     box-shadow: 0px 5px 5px lightgrey;
+    cursor: pointer;
 }
 
 @mixin full-heart-style {
@@ -22,7 +23,7 @@
     -webkit-background-clip: text;
     &:hover {
         opacity: 1;
-        transform: scale(1.4, 1.6);
+        transform: scale(1, 1.1);
     }
 }
 
@@ -31,4 +32,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@mixin shadow-style {
+    box-shadow: 0px 5px 15px -3px lightgrey;
+}
+
+@mixin btn-hover-style {
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px 3px lightgrey;
+    transform: scale(1.03);
 }

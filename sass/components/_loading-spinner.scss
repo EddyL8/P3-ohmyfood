@@ -9,7 +9,7 @@
     height: 100%;
     opacity: 0.9;
     background-color: $lighter-background;
-    animation: loading-screen 1s 3s forwards ease-in-out;
+    animation: loading-screen 3s ease-in-out 1s both;
     
     h1 {
         font-size: 60px;
